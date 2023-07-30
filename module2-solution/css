@@ -1,1 +1,53 @@
-
+body {
+    font-family: Arial, sans-serif; /* Optional: Set font-family */
+  }
+  
+  h1 {
+    font-size: 2rem; /* 75% larger than dummy text font size */
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .container {
+    display: flex; /* Display sections in a row */
+    flex-wrap: wrap; /* Allow sections to wrap in tablet/mobile view */
+    justify-content: space-between; /* Spacing between sections in desktop view */
+    margin: 0 auto;
+    max-width: 992px; /* Set a max-width for desktop view */
+  }
+  
+  .section {
+    width: 31%; /* Each section takes up equal space on desktop view */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: #f0f0f0; /* Background color for sections */
+    box-sizing: border-box; /* Use border-box for correct sizing with padding and border */
+    position: relative;
+  }
+  
+  .section-title {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    background-color: #4CAF50; /* Background color for section titles */
+    color: white; /* Text color for section titles */
+    font-size: 125%; /* 25% larger than dummy text font size */
+  }
+  
+  /* Media Queries for Tablet and Mobile Views */
+  @media (max-width: 991px) {
+    .section {
+      width: 48%; /* Two sections side by side in tablet view */
+    }
+    .section:nth-child(3) {
+      width: 100%; /* Full width for the third section in tablet view */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .section {
+      width: 100%; /* Each section takes full width in mobile view */
+    }
+  }
